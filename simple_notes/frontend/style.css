@@ -1,0 +1,175 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f8f5;
+    color: #252920;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.container {
+    width: min(720px, calc(100% - 32px));
+    margin: 64px auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: #536c4c;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    letter-spacing: -0.8px;
+}
+
+h2 {
+    margin: 0 0 18px;
+    font-size: 18px;
+}
+
+.header p {
+    margin: 0;
+    color: #85877e;
+}
+
+.composer,
+.note {
+    background: white;
+    border: 1px solid #e8e9e2;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.composer {
+    margin-bottom: 36px;
+    box-shadow: 0 4px 20px rgba(37, 41, 32, 0.03);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 110px;
+    resize: vertical;
+    padding: 15px;
+    border: 1px solid #e4e6de;
+    border-radius: 10px;
+    font: inherit;
+    line-height: 1.6;
+    outline-color: #8da183;
+}
+
+textarea::placeholder {
+    color: #a0a297;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 18px;
+    background: #536c4c;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #40563a;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.notes-list {
+    display: grid;
+    gap: 12px;
+}
+
+.note {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.note p {
+    margin: 0;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.delete-button {
+    flex-shrink: 0;
+    padding: 9px 12px;
+    background: #f7eeee;
+    color: #a34e4e;
+    font-weight: 500;
+}
+
+.delete-button:hover {
+    background: #f0dddd;
+}
+
+#status {
+    color: #85877e;
+    font-size: 13px;
+}
+
+.empty {
+    padding: 30px 20px;
+    border: 1px dashed #d9dcd2;
+    border-radius: 14px;
+    text-align: center;
+    color: #85877e;
+}
+
+@media (max-width: 520px) {
+    .container {
+        margin: 35px auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .composer,
+    .note {
+        padding: 18px;
+    }
+
+    .note {
+        gap: 12px;
+    }
+
+    .delete-button {
+        padding: 9px;
+    }
+}
