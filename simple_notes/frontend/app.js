@@ -1,5 +1,5 @@
 
-const API = "http://localhost:8000";
+const API = "/api";
 
 const form = document.getElementById("note-form");
 const input = document.getElementById("note-input");
